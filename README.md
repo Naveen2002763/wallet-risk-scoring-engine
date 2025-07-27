@@ -119,8 +119,9 @@ You can use any one of the following three methods to provide your API key secur
 
 * In your Python script, the key is accessed as:
   
-import os
-ETHERSCAN_API_KEY = os.getenv("ETHERSCAN_API_KEY")
+  import os
+  
+  ETHERSCAN_API_KEY = os.getenv("ETHERSCAN_API_KEY")
 
 ## Method 2: Save Permanently on Mac/Linux Systems
 * Use this if you want to avoid setting the key every time.
@@ -143,16 +144,19 @@ ETHERSCAN_API_KEY = os.getenv("ETHERSCAN_API_KEY")
 
 * Your Python code remains the same:
   
-import os
-ETHERSCAN_API_KEY = os.getenv("ETHERSCAN_API_KEY")
+  import os
+
+  ETHERSCAN_API_KEY = os.getenv("ETHERSCAN_API_KEY")
 
 ## Method 3: Store in a Config File (Beginner Friendly)
 * You can create a simple config.txt file in the root folder of this project and write your API key inside it like:
-ETHERSCAN_API_KEY=your_api_key_here
+  
+  ETHERSCAN_API_KEY=your_api_key_here
 
 * Then in your Python script, read the key using:
-with open("config.txt") as f:
- ETHERSCAN_API_KEY = f.read().split("=")[1].strip()
+  
+  with open("config.txt") as f:
+  ETHERSCAN_API_KEY = f.read().split("=")[1].strip()
 
 * Make sure you add this config.txt file to your .gitignore to prevent accidental uploads to GitHub.
 
