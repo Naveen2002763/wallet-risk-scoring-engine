@@ -97,20 +97,24 @@ You can use any one of the following three methods to provide your API key secur
 ## Method 1: Set Temporarily via Terminal
 * Use this method if you want to run the script just once and test it quickly.
 
- On Windows, open Command Prompt or VS Code terminal and run:
+* On Windows, open Command Prompt or VS Code terminal and run:
+ 
 set ETHERSCAN_API_KEY=your_api_key_here
 
- On Mac/Linux, open Terminal and run:
+* On Mac/Linux, open Terminal and run:
+  
 export ETHERSCAN_API_KEY=your_api_key_here
 
 * This key will stay active only until you close that terminal window.
 
 * To check if it was saved correctly, run:
 
- On Windows:
+ * On Windows:
+ 
 echo %ETHERSCAN_API_KEY%
 
- On Mac/Linux:
+* On Mac/Linux:
+ 
 echo $ETHERSCAN_API_KEY
 
 * In your Python script, the key is accessed as:
