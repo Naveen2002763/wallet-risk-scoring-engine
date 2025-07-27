@@ -67,7 +67,7 @@ This makes the model scalable, interpretable, and suited for DeFi use cases such
 ├── output/ # Fetched txns + risk scores
 ├── scripts/
 │ ├── fetch_transactions.py # Data fetch logic
-│ └── score_engine.py # Risk score calculator
+│ └── feature_engineering.py # Risk score calculator
 ├── README.md
 ├── requirements.txt
 
