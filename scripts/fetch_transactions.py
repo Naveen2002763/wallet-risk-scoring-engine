@@ -6,10 +6,10 @@ import pandas as pd
 from tqdm import tqdm
 
 # === CONFIG ===
-ETHERSCAN_API_KEY = "P7WSAFKBVG7UUTSHIKZPWHW75QSAB4ZYH8"
+ETHERSCAN_API_KEY = os.getenv("ETHERSCAN_API_KEY")  # ✅ Now fetched from environment variable
 WALLET_CSV_PATH = "../data/Wallet id - Sheet1.csv"
 OUTPUT_JSON_PATH = "../output/wallet_transactions.json"
-MAX_TXNS_PER_WALLET = 10000  # Etherscan allows up to 10,000 per call
+MAX_TXNS_PER_WALLET = 10000
 
 # === LOAD WALLETS ===
 wallet_df = pd.read_csv(WALLET_CSV_PATH)
@@ -33,7 +33,7 @@ def fetch_wallet_transactions(wallet):
             "startblock": 0,
             "endblock": 99999999,
             "sort": "asc",
-            "apikey": ETHERSCAN_API_KEY
+            "apikey": ETHERSCAN_API_KEY  # ✅ Uses env variable
         }
         response = requests.get(BASE_URL, params=params, timeout=10)
         data = response.json()
@@ -54,10 +54,8 @@ for idx, wallet in enumerate(tqdm(wallet_list, desc="🔄 Fetching Transactions"
     print(f"[{idx + 1}/{len(wallet_list)}] Wallet: {wallet}")
     print(f"✅ Fetched {len(transactions)} transactions.")
 
-    # Rate limit buffer (5 requests/sec for free API)
     time.sleep(0.25)
 
-    # Autosave every 5 wallets
     if (idx + 1) % 5 == 0:
         with open(OUTPUT_JSON_PATH, "w") as f:
             json.dump(wallet_data, f, indent=2)
