@@ -84,7 +84,7 @@ python scripts/fetch_transactions.py
 
 # Step 3: Compute wallet risk scores
 python scripts/score_engine.py
-
+```
 ---
 
 ## 📤 Final Output
@@ -93,6 +93,8 @@ wallet_id	score
 0xfaa0768bde629806739c3a4620656c5d26f44ef2	732
 Located at: output/wallet_scores.csv
 
-👨‍💻 Author
+---
+
+## 👨‍💻 Author
 Name: Nadipena Naveen
 GitHub: [https://github.com/Naveen2002763]
