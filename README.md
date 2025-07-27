@@ -99,11 +99,11 @@ You can use any one of the following three methods to provide your API key secur
 
 * On Windows, open Command Prompt or VS Code terminal and run:
  
- set ETHERSCAN_API_KEY=your_api_key_here
+  set ETHERSCAN_API_KEY=your_api_key_here
 
 * On Mac/Linux, open Terminal and run:
   
- export ETHERSCAN_API_KEY=your_api_key_here
+  export ETHERSCAN_API_KEY=your_api_key_here
 
 * This key will stay active only until you close that terminal window.
 
@@ -111,7 +111,7 @@ You can use any one of the following three methods to provide your API key secur
 
  * On Windows:
  
-  echo %ETHERSCAN_API_KEY%
+   echo %ETHERSCAN_API_KEY%
 
 * On Mac/Linux:
  
@@ -128,18 +128,18 @@ ETHERSCAN_API_KEY = os.getenv("ETHERSCAN_API_KEY")
 * Open your Terminal app (or terminal in VS Code).
 
 * Run this command to save it permanently:
-* 
-echo 'export ETHERSCAN_API_KEY=your_api_key_here' >> ~/.bashrc
+  
+  echo 'export ETHERSCAN_API_KEY=your_api_key_here' >> ~/.bashrc
 
 * Then activate it:
-* 
-source ~/.bashrc
+ 
+  source ~/.bashrc
 
 💡 If you are using Zsh (common on newer Macs), replace .bashrc with .zshrc.
 
 * To confirm it's stored, run:
-* 
-echo $ETHERSCAN_API_KEY
+ 
+  echo $ETHERSCAN_API_KEY
 
 * Your Python code remains the same:
   
