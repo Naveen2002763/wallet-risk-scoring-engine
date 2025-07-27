@@ -85,6 +85,8 @@ python scripts/fetch_transactions.py
 # Step 3: Compute wallet risk scores
 python scripts/score_engine.py
 
+---
+
 ## 📤 Final Output
 The final output is a CSV with the following format:
 wallet_id	score
